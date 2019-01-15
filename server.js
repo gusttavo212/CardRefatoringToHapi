@@ -1,4 +1,5 @@
 const hapi = require('hapi');
+const markeConnect = require('./src/bd/connectMongoDb').markeConnect;//Conectart ao dataBase
 
 const app = new hapi.Server({
     port:5000    
