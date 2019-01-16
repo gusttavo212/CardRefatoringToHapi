@@ -11,6 +11,8 @@ const start = async () => {
     
     app.route(routes);
 
+    markeConnect;
+
     await app.start();
     console.log(`Server is running at ${app.info.port}`);    
 };

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const CardSchema = new mongoose.Schema({
     name: {
@@ -18,6 +19,7 @@ const CardSchema = new mongoose.Schema({
         default: Date.now
     }
 });
+CardSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model('Card', CardSchema)
 
 //mongoose.model("Card", CardSchema)
